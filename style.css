@@ -1,0 +1,121 @@
+body {
+    background: #0f172a;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.atm-container {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    width: 400px;
+    color: #f8fafc;
+    position: relative;
+    overflow: hidden;
+}
+.screen-display {
+    background: #020617;
+    border: 2px solid #38bdf8;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #4ade80;
+    text-align: center;
+    min-height: 60px;
+}
+#main-input, .form-container input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #475569;
+    background: #0f172a;
+    color: #4ade80;
+    font-size: 16px;
+    text-align: center;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #334155;
+    color: white;
+    transition: 0.2s;
+}
+button:hover { background: #475569; }
+.btn-enter { background: #16a34a; }
+.btn-activate { background: #2563eb; }
+.btn-clear { background: #dc2626; }
+.btn-exit { background: #64748b; }
+.menu-options button { text-align: left; padding-left: 20px; }
+
+/* --- ANIMATION HARDWARE STYLING --- */
+.hardware-zone {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 120px;
+}
+.card-slot {
+    width: 120px;
+    height: 15px;
+    background: #020617;
+    border: 2px solid #64748b;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 5px #38bdf8;
+    z-index: 2;
+}
+.slot-line {
+    width: 100px;
+    height: 3px;
+    background: #38bdf8;
+    box-shadow: 0 0 8px #38bdf8;
+}
+.atm-card {
+    width: 90px;
+    height: 55px;
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    border-radius: 6px;
+    margin-top: 20px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 1.2s ease-in-out, opacity 1.2s;
+    z-index: 1;
+}
+.card-chip {
+    width: 15px;
+    height: 12px;
+    background: #fbbf24;
+    border-radius: 2px;
+    position: absolute;
+    top: 12px;
+    left: 10px;
+}
+.card-text {
+    font-size: 10px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    letter-spacing: 1px;
+}
+
+/* --- CLASSES TRIGGERED BY JAVASCRIPT --- */
+.insert-animation {
+    transform: translateY(-50px) scale(0.6);
+    opacity: 0;
+}
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSE ATM System with Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="atm-container">
+        <h2 id="bank-title">CSE DIGITAL BANK ATM</h2>
+        
+        <!-- Interactive Screen -->
+        <div class="screen-display">
+            <p id="display-msg">Welcome! Please enter your 6-Digit Card Number to start.</p>
+            <input type="text" id="main-input" placeholder="Enter Card Number">
+        </div>
+        
+        <!-- Action Buttons for Navigation -->
+        <div class="action-zone" id="auth-buttons">
+            <button class="btn-enter" onclick="processCardInput()">Proceed</button>
+            <button class="btn-activate" onclick="showActivationForm()">New Card? Activate Here</button>
+        </div>
+
+        <!-- Dynamic Forms Container (Hidden by default) -->
+        <div id="dynamic-form" class="form-container" style="display: none;"></div>
+
+        <!-- Main ATM Menu (For Active/Old Cards) -->
+        <div class="menu-options" id="atm-menu" style="display: none;">
+            <button onclick="checkBalance()">1. Balance Inquiry</button>
+            <button onclick="handleTransaction('deposit')">2. Cash Deposit</button>
+            <button onclick="handleTransaction('withdraw')">3. Cash Withdrawal</button>
+            <button onclick="changePinForm()">4. Change ATM PIN</button>
+            <button class="btn-clear" onclick="blockCard()">5. Block ATM Card</button>
+            <button class="btn-exit" onclick="exitATM()">6. Exit / Remove Card</button>
+        </div>
+
+        <!-- ATM CARD INSERTION ANIMATION HARDWARE ZONE -->
+        <div class="hardware-zone">
+            <div class="card-slot">
+                <div class="slot-line"></div>
+            </div>
+            <!-- The Animated Card -->
+            <div class="atm-card" id="virtual-card">
+                <div class="card-chip"></div>
+                <div class="card-text">CSE BANK</div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
